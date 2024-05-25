@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Paiement</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="informationsOfTransaction">
+          <h1>Votre transaction</h1>
+          <ul>
+            <li>
+              <span
+                ><img
+                  src="./assets/store-solid.svg"
+                  alt="store"
+                />Marchand</span
+              >
+              Ma boutique
+            </li>
+            <li>
+              <span
+                ><img
+                  src="./assets/euro-sign-solid.svg"
+                  alt="Euro"
+                />Montant</span
+              >
+              20.00 €
+            </li>
+            <li>
+              <span
+                ><img src="./assets/file-lines-solid.svg" alt="Transaction" />N°
+                transaction</span
+              >
+              12345
+            </li>
+          </ul>
+          <hr />
+          <h2>
+            100% Sécurisé <img src="./assets/lock-solid.svg" alt="cadenas" />
+          </h2>
+          <p>
+            Vos données bancaires sont sécurisées selon les dernières normes via
+            la plateforme sécurisée.
+          </p>
+        </div>
+        <div class="informationOfPaiement">
+          <form onsubmit="handleSubmit()" action="" id="myForm">
+            <div class="creditCard">
+              <label for="card">Votre carte</label>
+              <img
+                class="iconeCreditCard"
+                src="./assets/credit-card-solid.svg"
+                alt="Carte de crédit"
+              />
+              <input
+                type="text"
+                id="card"
+                placeholder="Numéro de carte"
+                onchange="handleCreditCard()"
+                maxlength="16"
+                required
+              />
+            </div>
+            <div class="date">
+              <div class="secondParty">
+                <label for="expire">Date d'expiration</label>
+                <img
+                  class="iconeCalendar"
+                  src="./assets/calendar-days-solid.svg"
+                  alt="Calendrier"
+                />
+                <input
+                  type="text"
+                  id="expire"
+                  onchange="handleExpire()"
+                  placeholder="MM/AA"
+                  maxlength="05"
+                  required
+                />
+              </div>
+              <div class="secondParty">
+                <label for="cvv">CVV</label>
+                <img
+                  class="iconeCadenasCVV"
+                  src="./assets/lock-solid.svg"
+                  alt="Cadenas"
+                />
+                <input
+                  type="text"
+                  id="crypto"
+                  placeholder="123"
+                  onchange="handleCrypto()"
+                  required
+                />
+              </div>
+            </div>
+            <button id="buttonSubmit" type="submit" disabled>PAYER 20.00 €</button>
+          </form>
+          <img
+            class="imgPaiements"
+            src="./assets/logo_secur.jpg"
+            alt="Cadenas, CB, Visa, Mastercard"
+          />
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
